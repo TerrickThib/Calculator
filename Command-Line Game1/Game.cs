@@ -20,12 +20,14 @@ namespace Command_Line_Game1
                                     
             while (stopGame == false)
             {
+                //How to Quit Game
                 Console.WriteLine("To Exit type Quit otherwise press Enter to Continue");
                 input = Console.ReadLine();
                 if (input == "Quit")
                 {
                     stopGame = true;
                 }
+                //Getting Numbers for Math
                 Console.WriteLine("Enter Number");
                 input = Console.ReadLine();
                 if (!float.TryParse(input, out inputValue1))
@@ -40,9 +42,11 @@ namespace Command_Line_Game1
                     Console.WriteLine("Invalid Response");
                     continue;
                 }
+                //Loop for Invalid Response 
                 validInputReceived = false;               
                 while (validInputReceived == false)
                 {
+                    //Gives Choice of math symbole
                     Console.WriteLine("What would you like to use these in.");
                     Console.WriteLine("Add");
                     Console.WriteLine("Multiply");
